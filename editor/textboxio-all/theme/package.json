@@ -1,0 +1,21 @@
+{
+  "name": "tbio-theme-builder",
+  "description": "Textbox.io Theme Builder",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "watch": "npm update --loglevel error && grunt",
+    "build": "npm update --loglevel error && grunt postcss"
+  },
+  "dependencies": {
+    "csswring": "^5.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "load-grunt-tasks": "^3.5.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-partial-import": "^1.3.0",
+    "postcss-reporter": "^1.3.3"
+  }
+}

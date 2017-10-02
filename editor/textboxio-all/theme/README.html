@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>Textbox.io theme builder</title>
+    <script type='text/javascript' src='../textboxio/textboxio.js'></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        overflow-y: scroll;
+      }
+      a.mono {
+        font-family: monospace;
+      }
+      span.code {
+        font: normal 1.1em monospace;
+        background-color: rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.2);
+      }
+      span.status {
+        padding: 1em;
+        color: white;
+        position: fixed;
+        right:2%;
+        top:2em;
+      }
+      span.status-off {
+        background: red;
+      }
+      span.status-off::after {
+        content: 'Off';
+      }
+      span.status-off {
+        background: red;
+      }
+      span.status-on::after {
+        content: 'On';
+      }
+      span.status-on {
+        background: green;
+      }
+      .accordion {
+        padding: 0.5em;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid transparent;
+      }
+      .accordion:hover {
+        cursor: pointer;
+        border-color: black;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .accordion:before {
+        content: '\025B6';
+        font-size: 12px;
+        margin: 5px;
+        display: inline-block;
+        transition: transform 0.1s linear 0.2s;
+        transform: rotate(0deg);
+      }
+      .accordion.active:before {
+        transition: transform 0.1s linear;
+        transform: rotate(90deg);
+      }
+      .panel {
+        transition: opacity 0.3s ease, max-height 0.2s linear 0.1s;
+        max-height: 0px;
+        opacity: 0;
+        overflow: hidden;
+      }
+      .panel.show {
+        max-height: 37469px;
+        opacity: 1;
+      }
+    </style>
+
+    <!-- live reload script for the theme builder -->
+    <script type='text/javascript' src='http://localhost:37469/livereload.js'></script>
+
+    <script>
+      var instantiateTextbox = function () {
+        // set the live reload status colour
+        // var status = document.querySelector('.status');
+        // if (status !== undefined) {
+        //   if (typeof window.LiveReload === 'object') {
+        //     status.classList.add('status-on');
+        //   } else {
+        //     status.classList.add('status-off');
+        //   }
+        // }
+
+        // // listen for clicks on accordion elements
+        // document.body.addEventListener('click', function (event) {
+        //   if (event.target.classList.contains('accordion')) {
+        //     var header = event.target;
+        //     var panel = header.nextElementSibling;
+        //     header.classList.toggle('active');
+        //     panel.classList.toggle('show');
+        //   }
+        // });
+
+        // load textbox.io with default settings twice, so one of them is in the more drawer
+        textboxio.replaceAll('textarea', {
+          ui: {
+            toolbar: {
+              items: [
+                'undo', 'insert', 'style', 'emphasis', 'align', 'listindent', 'format', 'tools',
+                'undo', 'insert', 'style', 'emphasis', 'align', 'listindent', 'format', 'tools'
+              ]
+            }
+          }
+        });
+      };
+    </script>
+  </head>
+
+  <body onload="instantiateTextbox();">
+    <!-- <span class="status" style="display: none;">Live Reload: </span> -->
+    <div style="width:75%; margin:auto">
+        <!-- This width is specifically set so that some buttons are in the more drawer -->
+        <textarea id="textbox" style="width: 875px; height: 350px;"></textarea>
+         
+    </div>
+  </body>
+</html>

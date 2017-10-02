@@ -1,0 +1,583 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html><!-- <![endif]-->
+<head>
+	<title>FLAT PLUS Template (v1.2.3)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	<link rel="stylesheet/less" href="../assets/less/admin/module.admin.page.medical_memos.less" />
+	-->
+	
+		<!--[if lt IE 9]><link rel="stylesheet" href="../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+	<link rel="stylesheet" href="../assets/css/admin/module.admin.page.medical_memos.min.css" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../assets/components/library/jquery/jquery.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/jquery/jquery-migrate.min.js?v=v1.2.3"></script>
+<script src="../assets/components/library/modernizr/modernizr.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/less-js/less.min.js?v=v1.2.3"></script>
+<script src="../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v1.2.3"></script>	
+</head>
+<body class="">
+
+		<div class="navbar navbar-fixed-top navbar-primary main" role="navigation">
+    
+    <div class="navbar-header pull-left">
+        <div class="navbar-brand">
+            <div class="pull-left">
+                <a href="" class="toggle-button toggle-sidebar btn-navbar"><i class="fa fa-bars"></i></a>
+            </div>
+            <a href="index.html?lang=en" class="appbrand innerL">Flat+</a>
+            <div class="colors pull-right hidden-xs">
+                
+                                <li class="active"><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=style-default" style="background-color: #cb4040"><span class="hide">style-default</span></a></li>
+                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=brown" style="background-color: #ba5d32"><span class="hide">brown</span></a></li>
+                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=purple-gray" style="background-color: #86618f"><span class="hide">purple-gray</span></a></li>
+                
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle">
+                        <span class="color inverse"></span>
+                        <span class="color danger"></span>
+                        <span class="color success"></span>
+                        <span class="color info"></span>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=purple-wine"><span class="color" style="background-color: #b94b6f"></span> purple-wine</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=blue-gray"><span class="color" style="background-color: #496cad"></span> blue-gray</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=green-army"><span class="color" style="background-color: #6f8745"></span> green-army</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=black-and-white"><span class="color" style="background-color: #575757"></span> black-and-white</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=alizarin-crimson"><span class="color" style="background-color: #d15050"></span> alizarin-crimson</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=amazon"><span class="color" style="background-color: #488075"></span> amazon</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=amber"><span class="color" style="background-color: #a8a858"></span> amber</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=android-green"><span class="color" style="background-color: #90bd59"></span> android-green</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=antique-brass"><span class="color" style="background-color: #CD9575"></span> antique-brass</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=antique-bronze"><span class="color" style="background-color: #6e6e3c"></span> antique-bronze</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=artichoke"><span class="color" style="background-color: #8F9779"></span> artichoke</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=atomic-tangerine"><span class="color" style="background-color: #cc865e"></span> atomic-tangerine</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=bazaar"><span class="color" style="background-color: #98777B"></span> bazaar</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=bistre-brown"><span class="color" style="background-color: #a38229"></span> bistre-brown</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=bittersweet"><span class="color" style="background-color: #d6725e"></span> bittersweet</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=blueberry"><span class="color" style="background-color: #4e72c2"></span> blueberry</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=bud-green"><span class="color" style="background-color: #6fa362"></span> bud-green</a></li>
+                                                <li><a href="?module=admin&page=medical_memos&url_rewrite=&build=&v=v1.2.3&skin=burnt-sienna"><span class="color" style="background-color: #db897d"></span> burnt-sienna</a></li>
+                                            </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+  
+    <ul class="nav navbar-nav navbar-left">
+        <li class=" hidden-xs">
+            <form class="navbar-form navbar-left " role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type in here..."/>
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-inverse"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle user" data-toggle="dropdown"> <img src="../assets/images/people/35/8.jpg" alt="" class="img-circle"/><span class="hidden-xs hidden-sm"> &nbsp; Adrian Demian </span> <span class="caret"></span></a>
+            <ul class="dropdown-menu list pull-right ">
+                <li><a href="#">Your Profile <i class="fa fa-user pull-right"></i></a></li>
+                <li><a href="#">Edit Account <i class="fa fa-pencil pull-right"></i></a></li>
+                <li><a href="#">Get Help <i class="fa fa-question-circle pull-right"></i></a></li>
+                <li><a href="#">Log out <i class="fa fa-sign-out pull-right"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li class="dropdown notification">
+            <a href="#" class="dropdown-toggle menu-icon" data-toggle="dropdown"><i class="fa fa-fw fa-envelope-o"></i><span class="badge badge-primary">2</span></a>
+            <ul class="dropdown-menu inbox">
+                <li class="headline">Inbox</li>
+                <li><input type="text" class="form-control border-none" placeholder="Search Email..." /></li>
+                <li>
+                    <div class="media">
+                        <a class="pull-left" href="#"><img src="../assets/images/people/50/8.jpg" alt="" class="img-circle media-object"></a>
+                        <div class="media-body">
+                            <a href="" class="strong text-primary"> <i class="fa fa-circle"></i> Adrian Demian</a> <span>(3)</span><span class="pull-right time-email">10:20 AM</span>
+                            <div class="clearfix"></div>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit.
+                        </div>
+                    </div>    
+                </li>
+                <li>
+                    <div class="media">
+                        <a class="pull-left" href="#"><img src="../assets/images/people/50/3.jpg" alt="" class="img-circle media-object"></a>
+                        <div class="media-body">
+                            <a href="" class="strong text-primary"> Joanne Smith</a><span>(1)</span><span class="pull-right time-email">06:48 PM</span>
+                            <div class="clearfix"></div>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media">
+                        <a class="pull-left" href="#"><img src="../assets/images/people/50/20.jpg" alt="" class="img-circle media-object"></a>
+                        <div class="media-body">
+                            <a href="" class="strong text-primary"> <i class="fa fa-circle"></i> Mister Awesome</a> <span>(7)</span><span class="pull-right time-email">04:22 PM</span>
+                            <div class="clearfix"></div>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown notification hidden-sm hidden-md">
+            <a href="#" class="dropdown-toggle menu-icon" data-toggle="dropdown"><i class="fa fa-fw fa-exclamation-circle"></i><span class="badge badge-info">2</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </li>
+         <li class="dropdown notification hidden-sm hidden-md">
+            <a href="#" class="dropdown-toggle menu-icon" data-toggle="dropdown"><i class="fa fa-fw fa-dropbox"></i><span class="badge badge-success badge-icon"><i class="fa fa-check"></i></span></a>
+            <ul class="dropdown-menu dropbox list">
+                <li class="headline">
+                   <div class="row">
+                       <div class="col-md-6">Dropbox Folder</div>
+                       <div class="col-md-6">
+                           <a href="">Settings <i class="fa fa-cog"></i></a>
+                       </div>
+                   </div>
+                </li>
+                <li class="clean info">RECENTLY CHANGED</li>
+                                <li>
+                    <ul class="media-list">
+                        <li class="media innerAll half">
+                            <a class="pull-left" href="#"><img class="media-object" data-src="holder.js/35x35" alt="..."></a>
+                            <div class="media-body margin-none">
+                                <a class="padding-none">Media heading</a>
+                                <div class="clearfix"></div>
+                                <em>59 minutes ago</em>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                    <ul class="media-list">
+                        <li class="media innerAll half">
+                            <a class="pull-left" href="#"><img class="media-object" data-src="holder.js/35x35" alt="..."></a>
+                            <div class="media-body margin-none">
+                                <a class="padding-none">Media heading</a>
+                                <div class="clearfix"></div>
+                                <em>59 minutes ago</em>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                    <ul class="media-list">
+                        <li class="media innerAll half">
+                            <a class="pull-left" href="#"><img class="media-object" data-src="holder.js/35x35" alt="..."></a>
+                            <div class="media-body margin-none">
+                                <a class="padding-none">Media heading</a>
+                                <div class="clearfix"></div>
+                                <em>59 minutes ago</em>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                    <ul class="media-list">
+                        <li class="media innerAll half">
+                            <a class="pull-left" href="#"><img class="media-object" data-src="holder.js/35x35" alt="..."></a>
+                            <div class="media-body margin-none">
+                                <a class="padding-none">Media heading</a>
+                                <div class="clearfix"></div>
+                                <em>59 minutes ago</em>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="../assets//images/lang/en-flat.jpg" /></a>
+            <ul class="dropdown-menu pull-right">
+                <li class="active"><a href="">English</a></li>
+                <li><a href="">Romanian</a></li>
+            </ul>
+        </li>
+        <li><a href="" class="menu-icon"><i class="fa fa-sign-out"></i></a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+	
+	<div id="menu" class="hidden-print hidden-xs">
+	<div class="sidebar sidebar-inverse">
+		<div class="user-profile media innerAll">
+			<a href="" class="pull-left"><img src="../assets/images/people/50/8.jpg" alt="" class="img-circle"><span class="badge badge-primary">2</span></a>
+			<div class="media-body">
+				<a href="" class="strong">Adrian Demian</a>
+				<p class="text-success"><i class="fa fa-fw fa-circle"></i> Online</p>
+			</div>
+			<ul>
+				<li class="active"><a href=""><i class="fa fa-fw fa-user"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-envelope"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-lock"></i></a></li>
+			</ul>
+		</div>
+		<div class="sidebarMenuWrapper">
+			<ul class="list-unstyled">
+				<li><a href="index.html?lang=en"><i class=" icon-projector-screen-line"></i><span>Dashboard</span></a></li>
+				<li class="hasSubmenu">
+					<a href="#" data-target="#menu-style" data-toggle="collapse"><i class="icon-compose"></i><span>Menu &amp; Navbar</span></a>
+					<ul class="collapse" id="menu-style">
+						<li><a href="index.html?lang=en&amp;	sidebar_style=inverse"><span class="pull-right badge badge-primary"><i class="fa fa-check"></i></span>Sidebar Menu Dark</a></li>
+						<li><a href="index.html?lang=en&amp;sidebar_style=default">Sidebar Menu Light</a></li>
+						<li><a href="index.html?lang=en&amp;top_style=inverse">Top Menu Dark</a></li>
+						<li><a href="index.html?lang=en&amp;top_style=default">Top Menu Light</a></li>
+						<li><a href="index.html?lang=en&amp;top_style=primary"><span class="pull-right badge badge-primary"><i class="fa fa-check"></i></span>Top Menu Primary</a></li>
+					</ul>
+				</li>	
+				
+				<li><a href="profile_resume.html?lang=en"><i class="icon-user-1"></i><span>Profile / Resume</span></a></li>
+				<li class="hasSubmenu">
+					<a href="#" data-target="#support" data-toggle="collapse"><i class="icon-compose"></i><span>Support</span></a>
+					<ul class="collapse " id="support">
+						<li><a href="support_tickets.html?lang=en"><i class="icon-ticket"></i><span>Support Tickets</span></a></li>
+						<li><a href="support_forum_overview.html?lang=en"><i class="icon-bulleted-list"></i><span>Forum Overview</span></a></li>
+						<li><a href="support_forum_post.html?lang=en"><i class=" icon-paper-document-image"></i><span>Forum Post</span></a></li>
+						<li><a href="support_questions.html?lang=en"><i class=" fa fa-question-circle"></i><span>Q&amp;A Listing</span></a></li>
+						<li><a href="support_answers.html?lang=en"><i class=" icon-paper-document-image"></i><span>Q&amp;A Page </span></a></li>
+						<li><a href="support_knowledge.html?lang=en"><i class="  icon-medical-symbol-fill"></i><span>Knowledge Base </span></a></li>
+					</ul>
+				</li>
+				<li><a href="pricing_tables.html?lang=en"><i class="  icon-dollar"></i><span>Pricing Tables</span></a></li>
+				<li><a href="portfolio.html?lang=en"><i class=" icon-flip-camera-fill"></i><span>Filterable Gallery</span></a></li>
+				<li><a href="surveys_multiple.html?lang=en"><i class=" icon-comment-typing"></i><span>Survey</span></a></li>
+				<li><a href="events.html?lang=en"><i class="icon-time-clock"></i><span>Events</span></a></li>
+				<li><a href="contacts.html?lang=en"><i class="icon-group"></i><span>Contacts</span></a></li>
+				<li><a href="maps_google.html?lang=en"><i class="icon-map-location-fill-2"></i><span>Maps</span></a></li>
+				<li><a href="gallery.html?lang=en"><i class="icon-film-strip"></i><span>Media &amp; Carousels</span></a></li>
+	
+				<li class="hasSubmenu">
+					<a href="#" data-target="#collapse-menu" data-toggle="collapse"><i class="icon-settings-wheel-fill"></i><span>Interface Elements</span></a>
+					<ul class="collapse" id="collapse-menu">
+					
+						<li><a href="ui.html?lang=en"><i class="icon-butterfly"></i><span>Buttons &amp; Icons</span></a></li>
+						<li><a href="tables.html?lang=en"><i class="icon-categories"></i><span>Tables</span></a></li>
+						<li><a href="typography.html?lang=en"><i class="icon-paper-document"></i><span>Typography</span></a></li>
+						<li><a href="grid.html?lang=en"><i class="icon-dial-pad"></i><span>Grid System</span></a></li>
+						<li><a href="notifications.html?lang=en"><i class="icon-signal"></i><span>Alerts &amp; Notifications</span></a></li>
+						<li><a href="modals.html?lang=en"><i class="icon-new-window"></i><span>Modals</span></a></li>
+						<li><a href="widgets.html?lang=en"><i class="icon-browser"></i><span>Widgets</span></a></li>
+						<li><a href="sliders.html?lang=en"><i class="icon-sliders"></i><span>Sliders</span></a></li>
+						<li><a href="timelines.html?lang=en"><i class="icon-manager"></i><span>Timelines</span></a></li>
+						<li><a href="tabs.html?lang=en"><i class="icon-folder-add"></i><span>Tabs</span></a></li>
+						<li><a href="charts.html?lang=en"><i class="icon-graph-up-1"></i><span>Charts</span></a></li>
+						<li><a href="calendar.html?lang=en"><i class="icon-calendar-1"></i><span>Calendar</span></a></li>
+						
+					</ul>
+				</li>
+
+				<li class="hasSubmenu">
+					<a href="#" data-target="#forms-menu" data-toggle="collapse"><i class="icon-compose"></i><span>Forms</span></a>
+					<ul class="collapse" id="forms-menu">
+						<li><a href="form_wizards.html?lang=en">Form Wizards</a></li>
+						<li><a href="form_elements.html?lang=en">Form Elements</a></li>
+						<li><a href="form_validator.html?lang=en">Form Validator</a></li>
+						<li><a href="file_managers.html?lang=en">File Managers</a></li>
+					</ul>
+				</li>
+				
+				<li class="hasSubmenu active">
+					
+					<a href="#" data-target="#collapse-menu-pages" data-toggle="collapse"><i class="icon-note-pad"></i><span>Pages</span></a>
+					<ul class="collapse  in" id="collapse-menu-pages">
+					
+						<li><a href="email.html?lang=en"><i class=" icon-inbox-fill-1"></i><span>Inbox</span></a></li>
+						<li class="hasSubmenu">
+							<a href="#" data-target="#financial" data-toggle="collapse"><i class="icon-graph-up-1"></i><span>Financial</span></a>
+							<ul class="collapse" id="financial">
+								<li><a href="finances.html?lang=en">Finances</a></li>
+								<li><a href="invoice.html?lang=en">Invoice</a></li>
+								<li><a href="bookings.html?lang=en">Bookings</a></li>
+							</ul>
+						</li>
+						<li class="hasSubmenu active">
+							<a href="#" data-target="#medical" data-toggle="collapse"><i class="icon-medical-symbol-fill"></i> Medical</a>
+							<ul class="collapse in" id="medical">
+								<li><a href="medical_overview.html?lang=en">Overview</a></li>
+								<li><a href="medical_patients.html?lang=en">Patients</a></li>
+								<li><a href="medical_appointments.html?lang=en">Appointments</a></li>
+								<li class="active"><a href="medical_memos.html?lang=en">Memos</a></li>
+								<li><a href="medical_metrics.html?lang=en">Metrics</a></li>
+							</ul>
+						</li>
+						<li > <a href="social.html?lang=en"> <i class="icon-user-1"></i><span>Social</span></a></li>
+						
+						<li class="hasSubmenu">
+							<a href="#" data-target="#shop" data-toggle="collapse"><i class="icon-shopping-cart"></i>Online Shop</a>
+							<ul class="collapse " id="shop">
+								<li><a href="shop_edit_product.html?lang=en">Add product</a></li>
+								<li><a href="shop_products.html?lang=en">Products</a></li>
+							</ul>
+						</li>
+						<li class="hasSubmenu">
+							<a href="#" data-target="#account" data-toggle="collapse"><i class="icon-shopping-cart"></i>Account</a>
+							<ul class="collapse" id="account">
+									<li><a href="login.html?lang=en">Login</a></li>
+								<li><a href="signup.html?lang=en">Signup</a></li>
+								<li><a href="my_account.html?lang=en">Edit account</a></li>
+							</ul>
+						</li>
+						<li><a href="ratings.html?lang=en"><i class="icon-tv-star"></i><span>Ratings</span></a></li>
+						<li> <a href="error.html?lang=en"> <span>Error</span></a></li>
+					</ul>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<div id="content"><h1 class="content-heading bg-white border-bottom">Medical memos</h1>
+<div class="bg-white innerAll border-bottom">
+	<ul class="menubar">
+		<li><a href="index.html?lang=en">Dashboard</a></li>
+		<li><a href="#"><span class="badge badge-primary pull-right">30</span> Button</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Dropdown Link #1</a></li>
+				<li><a href="#">Dropdown Link #2</a></li>
+				<li><a href="#">Dropdown Link #3</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="innerAll spacing-x2">
+
+	<!-- row-app -->
+	<div class="row row-app">
+
+		<!-- col -->
+		<div class="col-lg-4">
+
+			<div class="heading-buttons border-bottom box-generic innerAll half margin-none border-bottom-none">
+				<h4 class="margin-none padding-none pull-left">Memos</h4>
+				<button class="btn btn-xs btn-inverse pull-right"><i class="fa fa-plus"></i> Add memo <i class="fa fa-file-text-o fa-fw"></i></button>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="box-generic innerAll half">
+				<div class="input-group input-group-sm">
+			      	<div class="input-group-btn">
+			        	<button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Name <span class="caret"></span></button>
+			        	<ul class="dropdown-menu">
+			          		<li><a href="#">Name</a></li>
+			          		<li><a href="#">Phone Number</a></li>
+			          		<li><a href="#">Group</a></li>
+			        	</ul>
+			      	</div>
+			      	<input type="text" class="form-control" placeholder="What are you searching for?">
+			    </div>
+			</div>
+
+			<div class="box-generic padding-none">
+				<a href=""><h5 class="strong margin-none innerAll half border-bottom">Dolor voluptates earum dignissimos</h5></a>
+				<div class="innerAll half border-bottom">
+					<i class="fa fa-calendar fa-fw text-primary"></i> 23 aug 2013 &nbsp;
+					<i class="fa fa-tag fa-fw text-primary"></i> <span class="label label-primary">tagged</span>
+				</div>
+				<div class="innerAll">
+					<p class="margin-none innerAll half"><i class="fa fa-quote-left fa-2x pull-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, aut, blanditiis pariatur ad enim ex dolorem. Rerum, fuga, praesentium nulla sed at numquam cupiditate dolores quos provident deleniti ab eius.</p>
+				</div>
+				<div class="innerLR innerT half bg-primary-light border-top">
+					<button class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i></button>
+					<div class="media inline-block margin-none">
+						<div class="innerLR">
+							<i class="fa fa-paperclip pull-left text-primary fa-2x"></i>
+							<div class="media-body">
+								<div><a href="" class="strong text-regular">Patients</a></div>
+								<span>15 MB</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="media inline-block margin-none">
+						<div class="innerLR border-left">
+							<i class="fa fa-bar-chart-o pull-left text-primary fa-2x"></i>
+							<div class="media-body">
+								<div><a href="" class="strong text-regular">Report</a></div>
+								<span>244 KB</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-generic padding-none">
+				<a href=""><h5 class="strong margin-none innerAll half border-bottom">Quibusdam expedita voluptates tenetur</h5></a>
+				<div class="innerAll half border-bottom">
+					<i class="fa fa-calendar fa-fw text-primary"></i> 21 aug 2013 &nbsp;
+					<i class="fa fa-tag fa-fw text-primary"></i> <span class="label label-primary">important</span>
+				</div>
+				<div class="innerAll">
+					<p class="margin-none innerAll half"><i class="fa fa-quote-left fa-2x pull-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptates itaque similique excepturi porro suscipit iste assumenda fugiat accusantium explicabo incidunt a ad odio blanditiis dolores consequatur sequi quisquam mollitia.</p>
+				</div>
+				<div class="innerLR innerT half bg-primary-light border-top">
+					<button class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i></button>
+					<div class="media inline-block margin-none">
+						<div class="innerLR">
+							<i class="fa fa-stethoscope pull-left text-primary fa-2x"></i>
+							<div class="media-body">
+								<div><a href="" class="strong text-regular">Lab Results</a></div>
+								<span>1 MB</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- // END col -->
+
+		<!-- col -->
+		<div class="col-lg-4">
+			
+			<div class="box-generic padding-none">
+				<h4 class="innerAll half margin-none"><i class="fa fa-star pull-right text-primary"></i>Bookmarks</h4>
+			</div>
+			
+			<div class="box-generic padding-none">
+				<div class="innerAll">
+					<p class="margin-none innerAll half"><i class="fa fa-quote-left fa-4x pull-left"></i> Aliquam rutrum, sem at scelerisque tempor, nulla diam pulvinar tortor, id pulvinar massa velit eu purus. Curabitur eu fringilla diam, sed suscipit lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras iaculis enim vel odio imperdiet faucibus. Aliquam erat volutpat.</p>
+				</div>
+				<div class="innerLR innerT half bg-gray border-top">
+					<button class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i></button>
+					<div class="media inline-block margin-none">
+						<div class="innerLR">
+							<i class="fa fa-hospital pull-left fa-2x text-primary"></i>
+							<div class="media-body">
+								<div><a href="" class="strong text-regular">Plans</a></div>
+								<span>120 KB</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="media inline-block margin-none">
+						<div class="innerLR border-left">
+							<i class="fa fa-euro pull-left fa-2x text-primary"></i>
+							<div class="media-body">
+								<div><a href="" class="strong text-regular">Income</a></div>
+								<span>24 KB</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-generic padding-none">
+				<div class="innerAll">
+					<p class="margin-none innerAll half"><i class="fa fa-quote-left fa-4x pull-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, labore unde tempora natus. Repellat, voluptatibus, omnis accusantium eveniet recusandae maiores laboriosam beatae rerum perferendis nostrum enim iure esse sunt non.</p>
+				</div>
+				<div class="innerAll half bg-gray border-top">
+					<button class="btn btn-inverse btn-xs pull-right"><i class="fa fa-sign-in"></i></button>
+					<span class="innerAll half inline-block">
+						<i class="fa fa-calendar text-primary fa-fw"></i> 22 nov 2013 &nbsp;
+						<i class="fa fa-tag text-primary fa-fw"></i> <span class="label label-primary">tagged</span> &nbsp;
+					</span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+		</div>
+		<!-- // END col -->
+
+	</div>
+	<!-- // END row-app -->
+
+</div>
+
+
+	
+	
+		
+		</div>
+		<!-- // Content END -->
+		
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+		
+		<div id="footer" class="hidden-print">
+			
+			<!--  Copyright Line -->
+			<div class="copy">&copy; 2012 - 2014 - <a href="http://www.mosaicpro.biz">MosaicPro</a> - All Rights Reserved. <a href="http://themeforest.net/?ref=mosaicpro" target="_blank">Purchase FLAT PLUS on ThemeForest</a> - Current version: v1.2.3 / <a target="_blank" href="http://demo.mosaicpro.biz/flatplus/CHANGELOG.txt">changelog</a></div>
+			<!--  End Copyright Line -->
+	
+		</div>
+		<!-- // Footer END -->
+		
+	</div>
+	<!-- // Main Container Fluid END -->
+	
+
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '',
+		commonPath = '../assets/',
+		rootPath = '../',
+		DEV = false,
+		componentsPath = '../assets/components/';
+	
+	var primaryColor = '#cb4040',
+		dangerColor = '#b55151',
+		infoColor = '#466baf',
+		successColor = '#8baf46',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../assets/components/library/bootstrap/js/bootstrap.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/nicescroll/jquery.nicescroll.min.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/breakpoints/breakpoints.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/animations.init.js?v=v1.2.3"></script>
+<script src="../assets/components/plugins/holder/holder.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.main.init.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/sidebar.collapse.init.js?v=v1.2.3"></script>
+<script src="../assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js?v=v1.2.3"></script>
+<script src="../assets/components/core/js/core.init.js?v=v1.2.3"></script>	
+</body>
+</html>
